@@ -11,6 +11,17 @@ const Projects = () => {
 
   const projects = [
     {
+      title: 'Taxtim',
+      description: 'Web application for South Africans to file tax returns with custom calculators and automated workflows.',
+      tech: ['PHP', 'Symfony', 'Vue.js', 'Mysql'],
+      highlights: [
+        'Custom tax calculators',
+        'Automated filing system',
+        'Performance optimizations',
+      ],
+      gradient: 'from-green-500 to-emerald-500',
+    },
+    {
       title: 'Everwell Edge',
       description: 'Healthcare platform providing dynamic content and technology to enhance patient experience. Built a 3D model viewer and editor using canvas.',
       tech: ['React', 'Laravel', 'MySQL', 'Canvas API', 'JWT'],
@@ -20,17 +31,6 @@ const Projects = () => {
         'Role-based access controls',
       ],
       gradient: 'from-blue-500 to-cyan-500',
-    },
-    {
-      title: 'Taxtim',
-      description: 'Web application for South Africans to file tax returns with custom calculators and automated workflows.',
-      tech: ['PHP', 'Symfony', 'Vue.js', 'PostgreSQL'],
-      highlights: [
-        'Custom tax calculators',
-        'Automated filing system',
-        'Performance optimizations',
-      ],
-      gradient: 'from-green-500 to-emerald-500',
     },
     {
       title: 'SNP - Solidarity Network Platform',
