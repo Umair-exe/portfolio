@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, MapPin, Phone, Download } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -36,8 +37,15 @@ const Hero = () => {
             className="mb-8"
           >
             <div className="w-40 h-40 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 p-1">
-              <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center text-6xl font-bold gradient-text">
-                UB
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <Image 
+                  src="https://github.com/umair-exe.png" 
+                  alt="M. Umair Bhatti"
+                  width={160}
+                  height={160}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </motion.div>
