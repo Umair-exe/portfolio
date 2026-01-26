@@ -48,17 +48,18 @@ const About = () => {
             className="glass rounded-2xl p-8 mb-12"
           >
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              I'm a Senior Software Engineer with over 5 years of experience building and delivering 
-              high-performance, enterprise-grade applications. I specialize in developing scalable systems using 
-              modern JavaScript frameworks (React, Angular, Vue, Node.js) and PHP ecosystems (Laravel, Symfony, CodeIgniter), 
-              with expertise in RESTful APIs, microservices, and full-stack development.
+              Welcome to my website — I’m Umair, a Senior Software Engineer and Full Stack Developer with over 5 years of experience building high-performance, enterprise-grade applications. I enjoy solving complex problems and creating reliable, scalable software that delivers real business value.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              I specialize in modern web development using React, Angular, Vue.js, and Node.js, along with strong expertise in PHP frameworks such as Laravel and Symfony. My work includes building RESTful APIs, designing microservices, and delivering complete end-to-end solutions with a focus on performance, maintainability, and clean architecture.
+            </p>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              Currently, I work at 3Amigos as a Senior Software Engineer, where I lead the development of enterprise applications, architect scalable solutions, and mentor junior developers. Over the years, I’ve contributed to impactful products across multiple industries, including healthcare, e-learning, government, and fintech, working with teams and clients across different countries.  
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Currently at <span className="text-primary-500 font-semibold">3Amigos</span> as Senior Software Engineer, 
-              I lead development of enterprise applications, architect scalable solutions, and mentor junior developers. 
-              My career spans multiple roles delivering impactful solutions for healthcare, e-learning, government, 
-              and fintech sectors across multiple countries.
+              If you’d like to collaborate or discuss a project, feel free to reach out — I’m always open to exciting opportunities and meaningful work.
             </p>
+            
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
