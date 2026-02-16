@@ -95,9 +95,9 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto rounded-full mb-4" />
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4" />
+          <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
+            Ready to start your project? Let's discuss how we can help bring your vision to life.
           </p>
         </motion.div>
 
@@ -108,8 +108,8 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Let's Connect</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Let's Connect</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               Whether you have a question, want to discuss a project, or just want to say hi, 
               feel free to reach out. I'll do my best to get back to you as soon as possible!
             </p>
@@ -125,12 +125,12 @@ const Contact = () => {
                   whileHover={{ x: 10 }}
                   className="flex items-center gap-4 glass rounded-lg p-4 group"
                 >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                     {info.icon}
                   </div>
                   <div>
-                    <div className="text-gray-400 text-sm">{info.label}</div>
-                    <div className="text-white font-medium">{info.value}</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">{info.label}</div>
+                    <div className="text-slate-900 dark:text-white font-medium">{info.value}</div>
                   </div>
                 </motion.a>
               ))}
@@ -142,7 +142,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Github size={24} />
               </motion.a>
@@ -151,7 +151,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, rotate: -5 }}
-                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Linkedin size={24} />
               </motion.a>
@@ -166,7 +166,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="glass rounded-xl p-8">
               <div className="mb-6">
-                <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
                   Your Name
                 </label>
                 <input
@@ -176,13 +176,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
                   placeholder="John Doe"
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
                   Your Email
                 </label>
                 <input
@@ -192,13 +192,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div className="mb-6">
-                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
                   Your Message
                 </label>
                 <textarea
@@ -208,7 +208,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -230,7 +230,7 @@ const Contact = () => {
                 disabled={isSubmitting}
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                className={`w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-purple-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all flex items-center justify-center gap-2 ${
+                className={`w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all flex items-center justify-center gap-2 ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >

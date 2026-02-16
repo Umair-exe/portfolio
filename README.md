@@ -1,6 +1,6 @@
-# M. Umair Bhatti - Portfolio Website
+# Professional Development Services
 
-A modern, creative, and fully responsive portfolio website built with Next.js, React, Framer Motion, and Tailwind CSS.
+A modern, professional services website built with Next.js, React, Framer Motion, and Tailwind CSS. Showcasing full-stack development services, case studies, and technical expertise.
 
 ## 🚀 Features
 
@@ -11,6 +11,7 @@ A modern, creative, and fully responsive portfolio website built with Next.js, R
 - **Type Animation**: Dynamic typing effect in hero section
 - **Glass Morphism**: Modern glassmorphism design elements
 - **Fast & Optimized**: Built with Next.js for optimal performance
+- **Service-Focused**: Clear presentation of services, case studies, and expertise
 
 ## 🛠️ Tech Stack
 

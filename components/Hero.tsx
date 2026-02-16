@@ -1,9 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, MapPin, Phone, Download } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Code2, Zap, Shield } from 'lucide-react'
 import { TypeAnimation } from 'react-type-animation'
-import Image from 'next/image'
 
 const Hero = () => {
   return (
@@ -19,7 +18,7 @@ const Hero = () => {
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+          className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.5, 0.3],
@@ -31,45 +30,41 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-6"
           >
-            <div className="w-40 h-40 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 p-1">
-              <div className="w-full h-full rounded-full overflow-hidden">
-                <Image 
-                  src="https://github.com/umair-exe.png" 
-                  alt="M. Umair Bhatti"
-                  width={160}
-                  height={160}
-                  className="w-full h-full object-cover"
-                  priority
-                />
-              </div>
-            </div>
+            <span className="px-4 py-2 glass rounded-full text-sm font-semibold text-primary-600 dark:text-primary-400">
+              Professional Development Services
+            </span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-4 text-white"
+            transition={{ delay: 0.3 }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-slate-900 dark:text-white max-w-5xl"
           >
-            M. UMAIR BHATTI
+            Transform Your Ideas Into{' '}
+            <span className="gradient-text">Digital Reality</span>
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-2xl md:text-4xl mb-6 h-20"
+            className="text-2xl md:text-3xl mb-6 h-16"
           >
             <TypeAnimation
               sequence={[
-                  'Software Engineer',
+                'Web Development',
                 2000,
-                'Full Stack Developer',
+                'Mobile Applications',
+                2000,
+                'Cloud Solutions',
+                2000,
+                'API Integration',
                 2000,
               ]}
               wrapper="span"
@@ -83,78 +78,74 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="text-gray-300 text-lg md:text-xl max-w-3xl mb-8"
+            className="text-gray-600 dark:text-gray-300 text-lg md:text-xl max-w-3xl mb-8"
           >
-            Experienced Full-Stack Developer passionate about building high-quality web applications 
-            that integrate cutting-edge technologies with seamless user experiences.
+            Expert full-stack development services to bring your business vision to life. 
+            From concept to deployment, we build scalable, secure, and high-performance applications.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="flex flex-wrap gap-4 mb-8 justify-center"
+            transition={{ delay: 0.7 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl"
           >
-            <div className="flex items-center gap-2 text-gray-300">
-              <MapPin size={20} className="text-primary-500" />
-              <span>Lahore, Pakistan</span>
+            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 justify-center">
+              <CheckCircle2 size={20} className="text-green-500" />
+              <span>5+ Years Experience</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Mail size={20} className="text-primary-500" />
-              <a href="mailto:umair.shabir99@gmail.com" className="hover:text-white">
-                umair.shabir99@gmail.com
-              </a>
+            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 justify-center">
+              <CheckCircle2 size={20} className="text-green-500" />
+              <span>50+ Projects Delivered</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Phone size={20} className="text-primary-500" />
-              <span>0321-4328875</span>
+            <div className="flex items-center gap-2 text-gray-600 dark:text-gray-300 justify-center">
+              <CheckCircle2 size={20} className="text-green-500" />
+              <span>100% Client Satisfaction</span>
             </div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.8 }}
             className="flex flex-wrap gap-4 justify-center"
           >
             <a
               href="#contact"
-              className="px-8 py-3 bg-gradient-to-r from-primary-500 to-purple-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all"
+              className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all flex items-center gap-2 group btn-glow"
             >
-              Get in Touch
+              Start Your Project
+              <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
             </a>
             <a
-              href="#projects"
-              className="px-8 py-3 glass text-white rounded-full font-semibold hover:bg-white/10 transition-all"
+              href="#services"
+              className="px-8 py-4 glass text-slate-900 dark:text-white rounded-full font-semibold hover:bg-primary-500/10 transition-all"
             >
-              View My Work
+              Explore Services
             </a>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2 }}
-            className="flex gap-6 mt-8"
+            transition={{ delay: 1 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl"
           >
-            <motion.a
-              href="https://github.com/umair-exe"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Github size={28} />
-            </motion.a>
-            <motion.a
-              href="https://linkedin.com/in/m-umair-dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: -5 }}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Linkedin size={28} />
-            </motion.a>
+            <div className="glass p-6 rounded-xl">
+              <Code2 className="w-10 h-10 text-primary-500 mb-3 mx-auto" />
+              <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Modern Stack</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Latest technologies & frameworks</p>
+            </div>
+            <div className="glass p-6 rounded-xl">
+              <Zap className="w-10 h-10 text-yellow-500 mb-3 mx-auto" />
+              <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Fast Delivery</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Agile development approach</p>
+            </div>
+            <div className="glass p-6 rounded-xl">
+              <Shield className="w-10 h-10 text-green-500 mb-3 mx-auto" />
+              <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Secure & Scalable</h3>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Enterprise-grade solutions</p>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -165,7 +156,7 @@ const Hero = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-400 rounded-full flex justify-center">
           <motion.div
             className="w-2 h-2 bg-primary-500 rounded-full mt-2"
             animate={{ y: [0, 16, 0] }}

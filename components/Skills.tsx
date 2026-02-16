@@ -42,7 +42,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 relative" ref={ref}>
+    <section id="technologies" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -50,8 +50,11 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Technical Skills</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto rounded-full" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Technologies We Use</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
+            Modern, proven technologies to build robust solutions
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -66,7 +69,7 @@ const Skills = () => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className={`w-1 h-8 rounded-full bg-gradient-to-b ${category.color}`} />
-                <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white">{category.title}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -77,7 +80,7 @@ const Skills = () => {
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: index * 0.1 + i * 0.05 }}
                     whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1.5 text-sm font-medium bg-white/5 text-gray-300 rounded-lg border border-white/10 hover:border-primary-500/50 hover:text-white transition-all"
+                    className="px-3 py-1.5 text-sm font-medium bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary-500/50 hover:text-primary-600 dark:hover:text-white transition-all"
                   >
                     {skill}
                   </motion.span>
@@ -108,7 +111,7 @@ const Skills = () => {
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                 {stat.value}
               </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

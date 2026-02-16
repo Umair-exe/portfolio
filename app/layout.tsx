@@ -5,9 +5,9 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'M. Umair Bhatti - Full Stack Developer',
-  description: 'Portfolio of M. Umair Bhatti - Experienced Full-Stack Developer passionate about building high-quality web applications',
-  keywords: 'Full Stack Developer, React, Laravel, Node.js, Web Development, Software Engineer',
+  title: 'DevServices - Professional Development Services',
+  description: 'Expert full-stack development services for your business. Web apps, mobile apps, cloud solutions, and API integration. 5+ years experience delivering enterprise-grade solutions.',
+  keywords: 'Web Development Services, Full Stack Development, Mobile App Development, API Integration, Cloud Solutions, React Development, Laravel Development, Node.js Services',
 }
 
 export default function RootLayout({

@@ -68,7 +68,7 @@ const Projects = () => {
   ]
 
   return (
-    <section id="projects" className="py-20 relative" ref={ref}>
+    <section id="portfolio" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -76,8 +76,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Featured Projects</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto rounded-full" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Case Studies</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
+            Real projects delivered for real clients across multiple industries
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -88,24 +91,24 @@ const Projects = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="glass rounded-xl overflow-hidden group"
+              className="glass rounded-xl overflow-hidden group card-shine"
             >
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-primary-400 transition-colors">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary-400 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
                     {project.highlights.map((highlight, i) => (
-                      <li key={i} className="text-gray-300 text-sm flex items-start">
+                      <li key={i} className="text-gray-600 dark:text-gray-300 text-sm flex items-start">
                         <span className="text-primary-500 mr-2">•</span>
                         <span>{highlight}</span>
                       </li>
@@ -117,7 +120,7 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium bg-primary-500/10 text-primary-400 rounded-full border border-primary-500/20"
+                      className="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400 rounded-full border border-primary-200 dark:border-primary-500/20"
                     >
                       {tech}
                     </span>
@@ -128,7 +131,7 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+                    className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                   >
                     <ExternalLink size={18} />
                     <span className="text-sm font-medium">View Project</span>

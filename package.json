@@ -1,6 +1,7 @@
 {
-  "name": "umair-bhatti-portfolio",
+  "name": "development-services-site",
   "version": "1.0.0",
+  "description": "Professional full-stack development services website",
   "private": true,
   "scripts": {
     "dev": "next dev",
