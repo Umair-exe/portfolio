@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { ExternalLink, Github } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 
 const Projects = () => {
   const ref = useRef(null)
@@ -76,10 +76,11 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Case Studies</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Selected Work</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Projects with product weight</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            Real projects delivered for real clients across multiple industries
+            SaaS-style workflows, operational platforms, web products, and app-connected systems across multiple industries
           </p>
         </motion.div>
 
@@ -105,7 +106,7 @@ const Projects = () => {
                 </p>
 
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Key Features:</h4>
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2">Highlights</h4>
                   <ul className="space-y-1">
                     {project.highlights.map((highlight, i) => (
                       <li key={i} className="text-gray-600 dark:text-gray-300 text-sm flex items-start">
@@ -134,7 +135,7 @@ const Projects = () => {
                     className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                   >
                     <ExternalLink size={18} />
-                    <span className="text-sm font-medium">View Project</span>
+                    <span className="text-sm font-medium">Project snapshot</span>
                   </motion.button>
                 </div>
               </div>

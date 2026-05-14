@@ -3,15 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 248, 250, 252;
+  --foreground-rgb: 22, 28, 45;
+  --background-start-rgb: 252, 248, 242;
+  --background-end-rgb: 240, 247, 243;
 }
 
 .dark {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 2, 6, 23;
-  --background-end-rgb: 15, 23, 42;
+  --foreground-rgb: 240, 244, 255;
+  --background-start-rgb: 9, 14, 26;
+  --background-end-rgb: 18, 26, 42;
+}
+
+* {
+  border-color: rgb(148 163 184 / 0.16);
 }
 
 body {
@@ -22,6 +26,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  min-height: 100vh;
 }
 
 @layer utilities {
@@ -36,30 +41,35 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e5e7eb;
+  background: #d9e2dd;
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0b1323;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #06b6d4, #3b82f6);
+  background: linear-gradient(180deg, #26aa8f, #fb6220);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #0891b2, #2563eb);
+  background: linear-gradient(180deg, #1a8874, #ec4810);
 }
 
 /* Smooth Scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
 }
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #d946ef 100%);
+  background: linear-gradient(135deg, #26aa8f 0%, #7cdfc6 45%, #ffaf74 100%);
   background-size: 200% 200%;
   animation: gradient 8s ease infinite;
   -webkit-background-clip: text;
@@ -67,19 +77,23 @@ html {
   background-clip: text;
 }
 
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
 /* Glass Effect */
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 250, 244, 0.62);
+  backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(124, 146, 132, 0.16);
+  box-shadow: 0 18px 60px 0 rgba(90, 68, 34, 0.08);
 }
 
 .dark .glass {
-  background: rgba(17, 25, 40, 0.5);
-  backdrop-filter: blur(16px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: linear-gradient(180deg, rgba(17, 25, 41, 0.72), rgba(11, 18, 32, 0.84));
+  backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(124, 223, 198, 0.12);
+  box-shadow: 0 24px 80px 0 rgba(0, 0, 0, 0.42);
 }
 
 /* Glass Hover Effect */
@@ -88,24 +102,55 @@ html {
 }
 
 .glass-hover:hover {
-  background: rgba(6, 182, 212, 0.1);
-  border-color: rgba(6, 182, 212, 0.3);
+  background: rgba(38, 170, 143, 0.1);
+  border-color: rgba(38, 170, 143, 0.3);
   transform: translateY(-2px);
 }
 
 /* Animated Gradient Background */
 .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(38, 170, 143, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(38, 170, 143, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
 }
 
 .dark .bg-grid-pattern {
   background-image: 
-    linear-gradient(rgba(6, 182, 212, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(124, 223, 198, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 175, 116, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
+}
+
+.mesh-background {
+  position: relative;
+  overflow-x: clip;
+}
+
+.mesh-background::before,
+.mesh-background::after {
+  content: '';
+  position: absolute;
+  inset: auto;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.mesh-background::before {
+  width: 22rem;
+  height: 22rem;
+  top: 4rem;
+  left: -6rem;
+  background: rgba(38, 170, 143, 0.16);
+}
+
+.mesh-background::after {
+  width: 24rem;
+  height: 24rem;
+  right: -8rem;
+  bottom: 12rem;
+  background: rgba(251, 98, 32, 0.14);
 }
 
 /* Glow Button Effect */
@@ -155,5 +200,10 @@ html {
 .card-shine:hover::after {
   left: 100%;
   top: 100%;
+}
+
+.section-eyebrow {
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 }
 

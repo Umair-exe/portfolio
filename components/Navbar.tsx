@@ -20,9 +20,10 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Technologies', href: '#technologies' },
+    { name: 'Capabilities', href: '#services' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#portfolio' },
+    { name: 'Toolkit', href: '#technologies' },
     { name: 'Contact', href: '#contact' },
   ]
 
@@ -42,8 +43,8 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
-            <span className="relative text-2xl font-bold gradient-text px-3 py-1">
-              DevServices
+            <span className="relative text-2xl font-display font-bold gradient-text px-3 py-1">
+              MU
             </span>
           </motion.a>
 

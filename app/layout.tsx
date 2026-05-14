@@ -1,13 +1,21 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Manrope, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-display',
+})
 
 export const metadata: Metadata = {
-  title: 'DevServices - Professional Development Services',
-  description: 'Expert full-stack development services for your business. Web apps, mobile apps, cloud solutions, and API integration. 5+ years experience delivering enterprise-grade solutions.',
-  keywords: 'Web Development Services, Full Stack Development, Mobile App Development, API Integration, Cloud Solutions, React Development, Laravel Development, Node.js Services',
+  title: 'Muhammad Umair | SaaS, Web, and Mobile App Developer',
+  description: 'Portfolio of Muhammad Umair, a full-stack developer building SaaS platforms, web applications, and mobile products with strong UX and scalable engineering.',
+  keywords: 'Muhammad Umair, SaaS Developer, Web Application Developer, Mobile App Developer, Full Stack Developer, React Developer, Laravel Developer, Next.js Portfolio',
 }
 
 export default function RootLayout({
@@ -17,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={inter.className}>{children}</body>
+      <body className={`${manrope.variable} ${spaceGrotesk.variable} font-sans`}>{children}</body>
     </html>
   )
 }

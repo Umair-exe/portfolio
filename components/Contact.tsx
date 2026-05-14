@@ -94,10 +94,11 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Get In Touch</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Contact</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Let’s make something sharp</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4" />
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-            Ready to start your project? Let's discuss how we can help bring your vision to life.
+            If you need a SaaS platform, web application, or mobile app, send the outline and I’ll take it from there.
           </p>
         </motion.div>
 
@@ -108,10 +109,9 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.2 }}
           >
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Let's Connect</h3>
+            <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">Start with a quick brief</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Whether you have a question, want to discuss a project, or just want to say hi, 
-              feel free to reach out. I'll do my best to get back to you as soon as possible!
+              Share the product, timeline, and core workflow. I can help shape and build SaaS platforms, web apps, and mobile experiences.
             </p>
 
             <div className="space-y-6 mb-8">
@@ -177,7 +177,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="John Doe"
+                  placeholder="Your name"
                 />
               </div>
 
@@ -193,7 +193,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="john@example.com"
+                  placeholder="name@company.com"
                 />
               </div>
 
@@ -209,7 +209,7 @@ const Contact = () => {
                   required
                   rows={5}
                   className="w-full px-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-primary-500 transition-colors resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="What SaaS platform, web app, or mobile app are you building?"
                 />
               </div>
 

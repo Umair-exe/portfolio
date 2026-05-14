@@ -12,33 +12,33 @@ const About = () => {
   const highlights = [
     {
       icon: <Award className="w-8 h-8" />,
-      title: 'Proven Expertise',
-      description: '5+ years delivering enterprise-grade solutions across multiple industries',
+      title: 'Systems Thinker',
+      description: 'I shape flows, components, and engineering decisions as one coherent product system.',
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: 'Client-Focused',
-      description: 'Dedicated to understanding your business needs and exceeding expectations',
+      title: 'Collaborative Partner',
+      description: 'I work closely with founders and teams to turn rough ideas into decisive shipped outcomes.',
     },
     {
       icon: <Clock className="w-8 h-8" />,
-      title: 'On-Time Delivery',
-      description: 'Agile methodology ensuring timely delivery without compromising quality',
+      title: 'Fast, Not Rushed',
+      description: 'Clear priorities and pragmatic execution keep momentum high without sacrificing craft.',
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: 'Results-Driven',
-      description: 'Focused on measurable outcomes that drive business growth',
+      title: 'Outcome Focused',
+      description: 'Every screen and feature is tied back to usability, performance, and business value.',
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Quality Assured',
-      description: 'Rigorous testing and best practices for secure, reliable applications',
+      title: 'Reliable Delivery',
+      description: 'Clean architecture, testing discipline, and maintainable code are part of the visual polish.',
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: 'Future-Proof',
-      description: 'Scalable architecture designed to grow with your business',
+      title: 'Built To Evolve',
+      description: 'I design flexible foundations so the product can grow without needing a rebuild.',
     },
   ]
 
@@ -51,7 +51,8 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Why Choose Us</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">About Me</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Craft, clarity, and shipping discipline</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
         </motion.div>
 
@@ -62,19 +63,14 @@ const About = () => {
             transition={{ delay: 0.2 }}
             className="glass rounded-2xl p-8 md:p-12 mb-12 text-center"
           >
-            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">
-              Building Digital Solutions That Drive Success
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-6">
+              I help teams turn SaaS ideas and app requirements into shipped products.
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
-              With over 5 years of experience in full-stack development, we specialize in transforming 
-              complex business requirements into elegant, high-performance software solutions. From startups 
-              to enterprises, we've delivered impactful projects across healthcare, fintech, e-learning, 
-              and government sectors.
+              Over the last 5+ years, I've worked across healthcare, fintech, e-learning, tax, and public-sector products. A lot of that work has centered on SaaS-style platforms, operational dashboards, customer portals, and complex web workflows that need to stay fast, clear, and dependable.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-              Our expertise spans modern frameworks including React, Vue.js, Angular, Node.js, Laravel, 
-              and Symfony. We don't just write code—we architect scalable systems, implement best practices, 
-              and deliver solutions that are secure, maintainable, and ready to scale with your business.
+              I work across React, Next.js, Vue, Laravel, Symfony, and modern mobile-friendly stacks to deliver products that are usable, scalable, and ready to grow. Whether the need is a SaaS platform, a customer-facing web app, or a mobile application, the focus stays on clean UX and solid engineering.
             </p>
           </motion.div>
 

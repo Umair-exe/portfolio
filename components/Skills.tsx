@@ -50,10 +50,11 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Technologies We Use</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Toolkit</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Tools I reach for often</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            Modern, proven technologies to build robust solutions
+            Chosen for speed of iteration, maintainability, and strong user experience
           </p>
         </motion.div>
 
@@ -99,9 +100,9 @@ const Skills = () => {
         >
           {[
             { label: 'Years Experience', value: '5+' },
-            { label: 'Projects Completed', value: '20+' },
+            { label: 'Projects Shipped', value: '20+' },
             { label: 'Technologies', value: '25+' },
-            { label: 'Happy Clients', value: '15+' },
+            { label: 'Domains Worked In', value: '6+' },
           ].map((stat, index) => (
             <motion.div
               key={index}

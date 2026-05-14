@@ -20,73 +20,73 @@ const Services = () => {
   const services = [
     {
       icon: <Code2 className="w-10 h-10" />,
-      title: 'Full-Stack Web Development',
-      description: 'Build powerful, scalable web applications using modern frameworks and technologies.',
+      title: 'SaaS Platforms',
+      description: 'End-to-end SaaS products with strong information architecture, admin tooling, and scalable backend foundations.',
       features: [
-        'Custom web applications with React, Vue.js, or Angular',
-        'Backend development with Node.js, Laravel, or Symfony',
-        'RESTful API design and implementation',
-        'Database architecture (MySQL, PostgreSQL, MongoDB)',
+        'Multi-role dashboards and account-based workflows',
+        'Billing, authentication, permissions, and API integration',
+        'Clear product UX for data-heavy interfaces',
+        'Scalable backend and database design for growth',
       ],
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: <Smartphone className="w-10 h-10" />,
-      title: 'Mobile App Development',
-      description: 'Create native-quality mobile applications for iOS and Android platforms.',
+      title: 'Mobile Applications',
+      description: 'Cross-platform mobile products designed for everyday use, speed, and clean user flows.',
       features: [
-        'Cross-platform apps with React Native',
-        'Progressive Web Apps (PWA)',
-        'Native mobile UI/UX implementation',
-        'App store deployment and optimization',
+        'React Native and mobile-friendly product delivery',
+        'User journeys optimized for smaller screens',
+        'Authentication, onboarding, and in-app workflows',
+        'Shared architecture between mobile and web where it fits',
       ],
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: <Database className="w-10 h-10" />,
-      title: 'API Integration & Development',
-      description: 'Design and integrate robust APIs to connect your systems seamlessly.',
+      title: 'Web Applications',
+      description: 'Full-stack product development for dashboards, portals, tools, and internal systems.',
       features: [
-        'RESTful and GraphQL API development',
-        'Third-party API integration (Stripe, Twilio, etc.)',
-        'Microservices architecture',
-        'API documentation and versioning',
+        'React, Vue, Next.js, Laravel, and Symfony delivery',
+        'Authentication, roles, permissions, and API layers',
+        'Workflow-heavy products with clear UX structure',
+        'Scalable databases and maintainable backend logic',
       ],
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: <Cloud className="w-10 h-10" />,
-      title: 'Cloud & DevOps Solutions',
-      description: 'Deploy and manage your applications on cloud infrastructure efficiently.',
+      title: 'Product Discovery and MVPs',
+      description: 'Pragmatic first releases for startups and teams validating a SaaS or app idea.',
       features: [
-        'AWS/Azure cloud deployment and management',
-        'Docker containerization',
-        'CI/CD pipeline setup with GitHub Actions',
-        'Performance monitoring and optimization',
+        'Rapid scoping for early-stage SaaS concepts',
+        'Feature prioritization around core workflows',
+        'Early product validation before heavy investment',
+        'Fast iteration on UX, flows, and technical direction',
       ],
       color: 'from-orange-500 to-red-500',
     },
     {
       icon: <Wrench className="w-10 h-10" />,
-      title: 'Maintenance & Support',
-      description: 'Keep your applications running smoothly with ongoing maintenance and updates.',
+      title: 'Platform Refinement',
+      description: 'Improving existing SaaS, web, and mobile products that need better UX or cleaner engineering.',
       features: [
-        'Bug fixes and troubleshooting',
-        'Performance optimization',
-        'Security updates and patches',
-        'Feature enhancements and upgrades',
+        'Refactor unclear workflows and brittle frontend code',
+        'Standardize components and reduce product inconsistency',
+        'Improve performance, maintainability, and usability',
+        'Untangle legacy features into clearer product systems',
       ],
       color: 'from-indigo-500 to-purple-500',
     },
     {
       icon: <Rocket className="w-10 h-10" />,
-      title: 'MVP Development',
-      description: 'Launch your startup idea quickly with a Minimum Viable Product.',
+      title: 'Launch and Growth Support',
+      description: 'Helping teams move from release to iteration with stable engineering and ongoing product improvements.',
       features: [
-        'Rapid prototyping and development',
-        'Technology stack consulting',
-        'Scalable architecture planning',
-        'Launch strategy and deployment',
+        'Deployment-ready builds and release planning',
+        'Iteration after launch based on product usage',
+        'Feature expansion without losing system clarity',
+        'Technical support across growth stages',
       ],
       color: 'from-yellow-500 to-orange-500',
     },
@@ -101,10 +101,11 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Our Services</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Capabilities</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">What I can help you make</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
-            Comprehensive development services tailored to your business needs
+            SaaS platforms, web products, and mobile applications built with strong UX and dependable architecture
           </p>
         </motion.div>
 
@@ -146,13 +147,13 @@ const Services = () => {
           className="text-center mt-16"
         >
           <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">
-            Don't see what you're looking for?
+            Building a SaaS product, a web app, or a mobile app?
           </p>
           <a
             href="#contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-primary-500 to-purple-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all"
           >
-            Discuss Your Project
+            Start a conversation
           </a>
         </motion.div>
       </div>

@@ -80,7 +80,8 @@ const Experience = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Work Experience</h2>
+          <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Experience</p>
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Teams, products, and long-form shipping</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
 
@@ -106,17 +107,17 @@ const Experience = () => {
                 >
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
+                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{exp.role}</h3>
                       <div className={`text-xl font-semibold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
                         {exp.company}
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2 mt-2 md:mt-0">
-                      <div className="flex items-center gap-2 text-gray-400">
+                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                         <Calendar size={16} />
                         <span className="text-sm">{exp.period}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-400">
+                      <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                         <Briefcase size={16} />
                         <span className="text-sm">{exp.location}</span>
                       </div>
@@ -125,7 +126,7 @@ const Experience = () => {
 
                   <ul className="space-y-2">
                     {exp.description.map((item, i) => (
-                      <li key={i} className="text-gray-300 flex items-start">
+                      <li key={i} className="text-gray-700 dark:text-gray-300 flex items-start">
                         <span className="text-primary-500 mr-2">▹</span>
                         <span>{item}</span>
                       </li>
