@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Briefcase, Calendar } from 'lucide-react'
+import { fadeDuration, sectionInView } from '@/lib/motion'
 
 const Experience = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, sectionInView)
 
   const experiences = [
     {
@@ -75,9 +75,9 @@ const Experience = () => {
     <section id="experience" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Experience</p>
@@ -93,18 +93,15 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 14 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+                transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.05 }}
                 className="relative mb-12 md:ml-20"
               >
                 {/* Timeline Dot */}
                 <div className="absolute -left-[5.25rem] top-8 w-4 h-4 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 hidden md:block" />
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="glass rounded-xl p-6 md:p-8"
-                >
+                <div className="glass rounded-xl p-6 md:p-8">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{exp.role}</h3>
@@ -132,7 +129,7 @@ const Experience = () => {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               </motion.div>
             ))}
           </div>

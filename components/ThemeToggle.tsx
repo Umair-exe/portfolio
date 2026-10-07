@@ -2,51 +2,37 @@
 
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
-import { motion } from 'framer-motion'
 
 const ThemeToggle = () => {
   const [darkMode, setDarkMode] = useState(true)
+  const [ready, setReady] = useState(false)
 
   useEffect(() => {
-    // Check for saved theme preference or default to dark mode
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme === 'light' || (!savedTheme && !prefersDark)) {
-      setDarkMode(false)
-      document.documentElement.classList.remove('dark')
-    } else {
-      setDarkMode(true)
-      document.documentElement.classList.add('dark')
-    }
+    const isDark = document.documentElement.classList.contains('dark')
+    setDarkMode(isDark)
+    setReady(true)
   }, [])
 
   const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-      setDarkMode(false)
-    } else {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-      setDarkMode(true)
-    }
+    const next = !darkMode
+    setDarkMode(next)
+    document.documentElement.classList.toggle('dark', next)
+    localStorage.setItem('theme', next ? 'dark' : 'light')
   }
 
   return (
-    <motion.button
+    <button
       onClick={toggleTheme}
       className="p-2 rounded-lg glass hover:bg-white/10 transition-colors"
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
       aria-label="Toggle theme"
+      suppressHydrationWarning
     >
-      {darkMode ? (
+      {ready && darkMode ? (
         <Sun className="w-5 h-5 text-yellow-400" />
       ) : (
         <Moon className="w-5 h-5 text-slate-700" />
       )}
-    </motion.button>
+    </button>
   )
 }
 

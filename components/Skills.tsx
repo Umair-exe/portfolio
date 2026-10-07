@@ -1,12 +1,12 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { fadeDuration, sectionInView } from '@/lib/motion'
 
 const Skills = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, sectionInView)
 
   const skillCategories = [
     {
@@ -45,9 +45,9 @@ const Skills = () => {
     <section id="technologies" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Toolkit</p>
@@ -61,11 +61,10 @@ const Skills = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
+              key={category.title}
+              initial={{ opacity: 0, y: 14 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+              transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
               className="glass rounded-xl p-6"
             >
               <div className="flex items-center gap-3 mb-4">
@@ -74,28 +73,23 @@ const Skills = () => {
               </div>
 
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: index * 0.1 + i * 0.05 }}
-                    whileHover={{ scale: 1.1 }}
-                    className="px-3 py-1.5 text-sm font-medium bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary-500/50 hover:text-primary-600 dark:hover:text-white transition-all"
+                {category.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-3 py-1.5 text-sm font-medium bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-gray-300 rounded-lg border border-slate-200 dark:border-white/10 hover:border-primary-500/50 hover:text-primary-600 dark:hover:text-white transition-colors"
                   >
                     {skill}
-                  </motion.span>
+                  </span>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Additional Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.15 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
         >
           {[
@@ -103,17 +97,11 @@ const Skills = () => {
             { label: 'Projects Shipped', value: '20+' },
             { label: 'Technologies', value: '25+' },
             { label: 'Domains Worked In', value: '6+' },
-          ].map((stat, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="glass rounded-xl p-6 text-center"
-            >
-              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
-                {stat.value}
-              </div>
+          ].map((stat) => (
+            <div key={stat.label} className="glass rounded-xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
               <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </div>

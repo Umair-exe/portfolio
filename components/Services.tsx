@@ -1,7 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { 
   Code2, 
@@ -12,10 +11,11 @@ import {
   Rocket,
   CheckCircle2 
 } from 'lucide-react'
+import { fadeDuration, sectionInView } from '@/lib/motion'
 
 const Services = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, sectionInView)
 
   const services = [
     {
@@ -96,9 +96,9 @@ const Services = () => {
     <section id="services" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Capabilities</p>
@@ -113,11 +113,10 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="glass rounded-2xl p-8 hover:shadow-xl hover:shadow-primary-500/10 transition-all card-shine"
+              initial={{ opacity: 0, y: 14 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+              transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
+              className="glass rounded-2xl p-8 hover:shadow-xl hover:shadow-primary-500/10 transition-shadow card-shine"
             >
               <div 
                 className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} mb-6`}
@@ -141,9 +140,9 @@ const Services = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.12 }}
           className="text-center mt-16"
         >
           <p className="text-gray-600 dark:text-gray-300 text-lg mb-6">

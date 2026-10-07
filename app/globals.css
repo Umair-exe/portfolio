@@ -63,15 +63,31 @@ html {
   overflow-x: clip;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .scroll-cue-dot {
+    animation: none !important;
+  }
+}
+
 body {
   overflow-x: clip;
 }
 
-/* Gradient Text */
+/* Gradient Text — static for performance (no infinite background shift) */
 .gradient-text {
   background: linear-gradient(135deg, #26aa8f 0%, #7cdfc6 45%, #ffaf74 100%);
-  background-size: 200% 200%;
-  animation: gradient 8s ease infinite;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -83,17 +99,17 @@ body {
 
 /* Glass Effect */
 .glass {
-  background: rgba(255, 250, 244, 0.62);
-  backdrop-filter: blur(22px) saturate(160%);
+  background: rgba(255, 250, 244, 0.78);
+  backdrop-filter: blur(10px) saturate(140%);
   border: 1px solid rgba(124, 146, 132, 0.16);
-  box-shadow: 0 18px 60px 0 rgba(90, 68, 34, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(90, 68, 34, 0.06);
 }
 
 .dark .glass {
-  background: linear-gradient(180deg, rgba(17, 25, 41, 0.72), rgba(11, 18, 32, 0.84));
-  backdrop-filter: blur(24px) saturate(160%);
+  background: linear-gradient(180deg, rgba(17, 25, 41, 0.88), rgba(11, 18, 32, 0.92));
+  backdrop-filter: blur(12px) saturate(140%);
   border: 1px solid rgba(124, 223, 198, 0.12);
-  box-shadow: 0 24px 80px 0 rgba(0, 0, 0, 0.42);
+  box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.36);
 }
 
 /* Glass Hover Effect */
@@ -133,24 +149,71 @@ body {
   position: absolute;
   inset: auto;
   border-radius: 9999px;
-  filter: blur(90px);
+  filter: blur(40px);
   pointer-events: none;
+  opacity: 0.45;
 }
 
 .mesh-background::before {
-  width: 22rem;
-  height: 22rem;
+  width: 18rem;
+  height: 18rem;
   top: 4rem;
-  left: -6rem;
-  background: rgba(38, 170, 143, 0.16);
+  left: -4rem;
+  background: rgba(38, 170, 143, 0.14);
 }
 
 .mesh-background::after {
-  width: 24rem;
-  height: 24rem;
-  right: -8rem;
+  width: 20rem;
+  height: 20rem;
+  right: -6rem;
   bottom: 12rem;
-  background: rgba(251, 98, 32, 0.14);
+  background: rgba(251, 98, 32, 0.12);
+}
+
+/* Hero ambient orbs — static (no continuous animation) */
+.hero-orbs::before,
+.hero-orbs::after {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.28;
+}
+
+.hero-orbs::before {
+  width: 18rem;
+  height: 18rem;
+  top: 5rem;
+  left: 2rem;
+  background: rgba(38, 170, 143, 0.32);
+}
+
+.hero-orbs::after {
+  width: 22rem;
+  height: 22rem;
+  right: 2rem;
+  bottom: 4rem;
+  background: rgba(251, 98, 32, 0.24);
+}
+
+.scroll-cue {
+  opacity: 0.7;
+}
+
+.scroll-cue-dot {
+  animation: scroll-dot 2.2s ease-in-out infinite;
+}
+
+@keyframes scroll-dot {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(12px);
+    opacity: 0.45;
+  }
 }
 
 /* Glow Button Effect */

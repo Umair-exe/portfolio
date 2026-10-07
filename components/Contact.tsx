@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { Mail, Phone, MapPin, Send, Linkedin, Github } from 'lucide-react'
+import { fadeDuration, sectionInView } from '@/lib/motion'
 
 const Contact = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, sectionInView)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -89,9 +89,9 @@ const Contact = () => {
     <section id="contact" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Contact</p>
@@ -105,9 +105,9 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.2 }}
+            initial={{ opacity: 0, y: 14 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.04 }}
           >
             <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">Start with a quick brief</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -119,11 +119,10 @@ const Contact = () => {
                 <motion.a
                   key={index}
                   href={info.href}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-4 glass rounded-lg p-4 group"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                  transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.06 + index * 0.04 }}
+                  className="flex items-center gap-4 glass rounded-lg p-4 group transition-colors"
                 >
                   <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
                     {info.icon}
@@ -137,32 +136,30 @@ const Contact = () => {
             </div>
 
             <div className="flex gap-4">
-              <motion.a
+              <a
                 href="https://github.com/umair-exe"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, rotate: 5 }}
                 className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Github size={24} />
-              </motion.a>
-              <motion.a
+              </a>
+              <a
                 href="https://linkedin.com/in/m-umair-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.1, rotate: -5 }}
                 className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Linkedin size={24} />
-              </motion.a>
+              </a>
             </div>
           </motion.div>
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ delay: 0.4 }}
+            initial={{ opacity: 0, y: 14 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.08 }}
           >
             <form onSubmit={handleSubmit} className="glass rounded-xl p-8">
               <div className="mb-6">
@@ -225,12 +222,10 @@ const Contact = () => {
                 </div>
               )}
 
-              <motion.button
+              <button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                className={`w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-all flex items-center justify-center gap-2 ${
+                className={`w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-shadow flex items-center justify-center gap-2 ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
@@ -245,7 +240,7 @@ const Contact = () => {
                     Send Message
                   </>
                 )}
-              </motion.button>
+              </button>
             </form>
           </motion.div>
         </div>

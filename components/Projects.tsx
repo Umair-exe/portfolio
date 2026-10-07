@@ -1,13 +1,13 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ExternalLink } from 'lucide-react'
+import { fadeDuration, sectionInView } from '@/lib/motion'
 
 const Projects = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, sectionInView)
 
   const projects = [
     {
@@ -71,9 +71,9 @@ const Projects = () => {
     <section id="portfolio" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 14 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Selected Work</p>
@@ -88,10 +88,9 @@ const Projects = () => {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              initial={{ opacity: 0, y: 14 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+              transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
               className="glass rounded-xl overflow-hidden group card-shine"
             >
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
@@ -129,14 +128,13 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <button
+                    type="button"
                     className="flex items-center gap-2 text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors"
                   >
                     <ExternalLink size={18} />
                     <span className="text-sm font-medium">Project snapshot</span>
-                  </motion.button>
+                  </button>
                 </div>
               </div>
             </motion.div>
