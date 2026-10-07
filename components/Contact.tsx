@@ -89,8 +89,8 @@ const Contact = () => {
     <section id="contact" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          initial={{ opacity: 1, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
           transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
@@ -105,8 +105,8 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            initial={{ opacity: 1, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
             transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.04 }}
           >
             <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-6">Start with a quick brief</h3>
@@ -119,8 +119,8 @@ const Contact = () => {
                 <motion.a
                   key={index}
                   href={info.href}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                  initial={{ opacity: 1, y: 8 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 8 }}
                   transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.06 + index * 0.04 }}
                   className="flex items-center gap-4 glass rounded-lg p-4 group transition-colors"
                 >
@@ -157,8 +157,8 @@ const Contact = () => {
 
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            initial={{ opacity: 1, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
             transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.08 }}
           >
             <form onSubmit={handleSubmit} className="glass rounded-xl p-8">

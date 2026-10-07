@@ -5,7 +5,7 @@ export const sectionInView = {
 }
 
 export const fadeUpSoft = {
-  initial: { opacity: 0, y: 14 },
+  initial: { opacity: 1, y: 10 },
   show: { opacity: 1, y: 0 },
 }
 

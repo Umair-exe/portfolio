@@ -1,12 +1,4 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, Code2, Palette, Sparkles } from 'lucide-react'
-
-const fadeUp = {
-  initial: { opacity: 0, y: 12 },
-  animate: { opacity: 1, y: 0 },
-}
 
 const Hero = () => {
   return (
@@ -15,47 +7,27 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="mb-6"
-          >
+          <div className="mb-6">
             <span className="px-4 py-2 glass rounded-full text-sm font-semibold text-primary-700 dark:text-primary-300 section-eyebrow">
               SaaS platforms. Web apps. Mobile apps.
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.05 }}
-            className="font-display text-5xl md:text-7xl font-bold mb-6 text-slate-900 dark:text-white max-w-5xl"
-          >
+          <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 text-slate-900 dark:text-white max-w-5xl">
             I build
             <span className="gradient-text"> SaaS platforms </span>
             and modern apps people rely on.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
-            className="text-xl md:text-2xl mb-6 font-semibold gradient-text"
-          >
+          <p className="text-xl md:text-2xl mb-6 font-semibold gradient-text">
             SaaS · Web · Mobile · Product engineering
-          </motion.p>
+          </p>
 
-          <motion.p
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.15 }}
-            className="text-gray-700 dark:text-slate-300 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed"
-          >
+          <p className="text-gray-700 dark:text-slate-300 text-lg md:text-xl max-w-3xl mb-8 leading-relaxed">
             I&apos;m Muhammad Umair, a full-stack developer focused on SaaS platforms, web applications, and mobile experiences for startups, product teams, and growing businesses.
-          </motion.p>
+          </p>
 
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10 max-w-3xl">
             <div className="flex items-center gap-2 text-gray-700 dark:text-slate-300 justify-center">
               <CheckCircle2 size={20} className="text-green-500" />
               <span>5+ years building products</span>
@@ -68,13 +40,9 @@ const Hero = () => {
               <CheckCircle2 size={20} className="text-green-500" />
               <span>Web and mobile delivery</span>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.25 }}
-            className="flex flex-wrap gap-4 justify-center"
-          >
+          <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="#contact"
               className="px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-shadow flex items-center gap-2 group btn-glow"
@@ -88,13 +56,9 @@ const Hero = () => {
             >
               View selected work
             </a>
-          </motion.div>
+          </div>
 
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.4, ease: 'easeOut', delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl w-full"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-4xl w-full">
             <div className="glass p-6 rounded-xl">
               <Code2 className="w-10 h-10 text-primary-500 mb-3 mx-auto" />
               <h3 className="text-slate-900 dark:text-white font-semibold mb-2">SaaS Architecture</h3>
@@ -110,7 +74,7 @@ const Hero = () => {
               <h3 className="text-slate-900 dark:text-white font-semibold mb-2">Mobile Products</h3>
               <p className="text-gray-600 dark:text-gray-400 text-sm">Cross-platform app experiences built with performance and usability in mind</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

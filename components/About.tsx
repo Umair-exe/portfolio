@@ -46,8 +46,8 @@ const About = () => {
     <section id="about" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          initial={{ opacity: 1, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
           transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
@@ -58,8 +58,8 @@ const About = () => {
 
         <div className="max-w-5xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+            initial={{ opacity: 1, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
             transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.05 }}
             className="glass rounded-2xl p-8 md:p-12 mb-12 text-center"
           >
@@ -78,8 +78,8 @@ const About = () => {
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 14 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+                initial={{ opacity: 1, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
                 transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.08 + index * 0.04 }}
                 className="glass rounded-xl p-6 card-shine"
               >

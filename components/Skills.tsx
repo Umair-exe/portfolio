@@ -45,8 +45,8 @@ const Skills = () => {
     <section id="technologies" className="py-20 relative" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          initial={{ opacity: 1, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
           transition={{ duration: fadeDuration, ease: 'easeOut' }}
           className="text-center mb-16"
         >
@@ -62,8 +62,8 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 14 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+              initial={{ opacity: 1, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
               transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
               className="glass rounded-xl p-6"
             >
@@ -87,8 +87,8 @@ const Skills = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+          initial={{ opacity: 1, y: 10 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
           transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.15 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
         >
