@@ -8,17 +8,8 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
 import Navbar from '@/components/Navbar'
-import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   return (
     <main className="mesh-background min-h-screen bg-gradient-to-br from-orange-50 via-stone-50 to-emerald-50 dark:from-slate-950 dark:via-[#0d1727] dark:to-[#132238] bg-grid-pattern transition-colors duration-300">
       <Navbar />

@@ -12,10 +12,42 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-display',
 })
 
+const siteUrl = 'https://portfolio-umair-exe.netlify.app'
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: 'Muhammad Umair | SaaS, Web, and Mobile App Developer',
-  description: 'Portfolio of Muhammad Umair, a full-stack developer building SaaS platforms, web applications, and mobile products with strong UX and scalable engineering.',
-  keywords: 'Muhammad Umair, SaaS Developer, Web Application Developer, Mobile App Developer, Full Stack Developer, React Developer, Laravel Developer, Next.js Portfolio',
+  description:
+    'Full-stack developer building SaaS platforms, web applications, and mobile products with Laravel, Symfony, React, Next.js, and Vue.',
+  keywords: [
+    'Muhammad Umair',
+    'SaaS Developer',
+    'Full Stack Developer',
+    'Laravel',
+    'Symfony',
+    'React',
+    'Next.js',
+    'Vue',
+  ],
+  authors: [{ name: 'Muhammad Umair' }],
+  openGraph: {
+    type: 'website',
+    url: siteUrl,
+    siteName: 'Muhammad Umair Portfolio',
+    title: 'Muhammad Umair | SaaS, Web, and Mobile App Developer',
+    description:
+      'Full-stack engineer shipping workflow-heavy SaaS — Laravel, Symfony, React, Next.js, Vue.',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Muhammad Umair | SaaS, Web, and Mobile App Developer',
+    description:
+      'Full-stack engineer shipping workflow-heavy SaaS — Laravel, Symfony, React, Next.js, Vue.',
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 }
 
 export default function RootLayout({
