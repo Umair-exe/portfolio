@@ -15,8 +15,8 @@ export default function OpenGraphImage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          background: 'linear-gradient(135deg, #0b1220 0%, #132238 55%, #1a2f4a 100%)',
-          color: '#f8fafc',
+          background: 'linear-gradient(145deg, #070b14 0%, #0d1322 48%, #12203a 100%)',
+          color: '#e8eef8',
           padding: '64px',
           fontFamily: 'sans-serif',
         }}
@@ -24,10 +24,10 @@ export default function OpenGraphImage() {
         <div
           style={{
             display: 'flex',
-            fontSize: 28,
-            letterSpacing: 2,
+            fontSize: 26,
+            letterSpacing: 3,
             textTransform: 'uppercase',
-            color: '#94a3b8',
+            color: '#6b8cff',
           }}
         >
           Portfolio
@@ -36,11 +36,11 @@ export default function OpenGraphImage() {
           <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05 }}>
             Muhammad Umair
           </div>
-          <div style={{ fontSize: 34, color: '#cbd5e1', maxWidth: 900, lineHeight: 1.3 }}>
+          <div style={{ fontSize: 34, color: '#b7c4de', maxWidth: 920, lineHeight: 1.3 }}>
             Full-stack engineer building SaaS platforms, web apps, and workflow-heavy products
           </div>
         </div>
-        <div style={{ display: 'flex', gap: 24, fontSize: 24, color: '#94a3b8' }}>
+        <div style={{ display: 'flex', gap: 24, fontSize: 24, color: '#7a8aad' }}>
           <span>Laravel</span>
           <span>·</span>
           <span>Symfony</span>

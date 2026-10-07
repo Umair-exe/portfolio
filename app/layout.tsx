@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
-import { Manrope, Space_Grotesk } from 'next/font/google'
+import { Figtree, Sora } from 'next/font/google'
 import './globals.css'
 
-const manrope = Manrope({
+const figtree = Figtree({
   subsets: ['latin'],
   variable: '--font-sans',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const sora = Sora({
   subsets: ['latin'],
   variable: '--font-display',
 })
@@ -64,7 +64,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${manrope.variable} ${spaceGrotesk.variable} font-sans`}>{children}</body>
+      <body className={`${figtree.variable} ${sora.variable} font-sans antialiased`}>{children}</body>
     </html>
   )
 }

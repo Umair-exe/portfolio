@@ -23,7 +23,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg glass hover:bg-white/10 transition-colors"
+      className="p-2 rounded-xl glass hover:border-primary-400/40 transition-colors"
       aria-label="Toggle theme"
       suppressHydrationWarning
     >

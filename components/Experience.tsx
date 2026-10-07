@@ -23,7 +23,7 @@ const Experience = () => {
         'Mentored junior developers, conducted code reviews, and established best practices for clean, maintainable code',
         'Collaborated with product managers and stakeholders to translate business needs into technical solutions',
       ],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-primary-500 to-accent-500',
     },
     {
       company: 'K-Optional Software, LLC',
@@ -38,7 +38,7 @@ const Experience = () => {
         'Collaborated with cross-functional teams to deliver client-focused solutions within agile workflows',
         'Took ownership of modules from development to deployment, gaining strong experience in full-stack software delivery',
       ],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-accent-500 to-primary-400',
     },
     {
       company: 'OCloud Solutions',
@@ -53,7 +53,7 @@ const Experience = () => {
         'Collaborated in an agile team, participating in sprints, code reviews, and debugging sessions',
         'Strengthened skills in full-stack development by working on both backend logic and frontend interfaces',
       ],
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-primary-400 to-accent-400',
     },
     {
       company: 'OCloud Solutions',
@@ -67,7 +67,7 @@ const Experience = () => {
         'Contributed to UI enhancements, bug fixing, and testing under the guidance of senior developers',
         'Learned agile workflows, version control with Git, and fundamentals of collaborative software engineering',
       ],
-      color: 'from-orange-500 to-red-500',
+      color: 'from-accent-400 to-primary-500',
     },
   ]
 
@@ -82,13 +82,13 @@ const Experience = () => {
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Experience</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Teams, products, and long-form shipping</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto rounded-full" />
+          <div className="section-rule mx-auto" />
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-purple-500 hidden md:block" />
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-accent-500 hidden md:block" />
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -99,12 +99,12 @@ const Experience = () => {
                 className="relative mb-12 md:ml-20"
               >
                 {/* Timeline Dot */}
-                <div className="absolute -left-[5.25rem] top-8 w-4 h-4 rounded-full bg-gradient-to-r from-primary-500 to-purple-500 hidden md:block" />
+                <div className="absolute -left-[5.25rem] top-8 w-3.5 h-3.5 rounded-full bg-primary-500 ring-4 ring-primary-500/20 hidden md:block" />
 
-                <div className="glass rounded-xl p-6 md:p-8">
+                <div className="glass rounded-2xl p-6 md:p-8">
                   <div className="flex flex-wrap items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">{exp.role}</h3>
+                      <h3 className="text-2xl font-bold text-ink-900 dark:text-white mb-1">{exp.role}</h3>
                       <div className={`text-xl font-semibold bg-gradient-to-r ${exp.color} bg-clip-text text-transparent`}>
                         {exp.company}
                       </div>

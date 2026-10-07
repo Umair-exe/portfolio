@@ -35,11 +35,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg blur opacity-20 group-hover:opacity-40 transition-opacity"></div>
-            <span className="relative text-2xl font-display font-bold gradient-text px-3 py-1">
-              MU
-            </span>
+          <a href="#home" className="text-2xl font-display font-bold gradient-text px-1 tracking-tight">
+            MU
           </a>
 
           <div className="hidden md:flex items-center space-x-8">
@@ -48,10 +45,10 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-400 dark:hover:text-primary-400 transition-colors relative group"
+                className="text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-300 transition-colors relative group text-sm font-medium"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
           </div>

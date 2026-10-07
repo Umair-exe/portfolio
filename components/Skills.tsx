@@ -12,32 +12,32 @@ const Skills = () => {
     {
       title: 'Full-Stack Frameworks',
       skills: ['MERN', 'TALL', 'RILT', 'VILT', 'MEVN', 'Next.js'],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-primary-500 to-accent-500',
     },
     {
       title: 'Frontend',
       skills: ['React.js', 'Vue.js', 'Tailwind CSS', 'Alpine.js', 'TypeScript', 'JavaScript'],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-accent-500 to-primary-400',
     },
     {
       title: 'Backend',
       skills: ['Laravel', 'Node.js', 'Express.js', 'Symfony', 'Livewire', 'PHP'],
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-primary-400 to-accent-400',
     },
     {
       title: 'Databases',
       skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
-      color: 'from-orange-500 to-red-500',
+      color: 'from-accent-400 to-primary-500',
     },
     {
       title: 'Mobile & PWA',
       skills: ['React Native', 'Progressive Web Apps'],
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-primary-600 to-accent-500',
     },
     {
       title: 'DevOps & Testing',
       skills: ['Docker', 'GitHub Actions', 'AWS EC2/S3', 'PHPUnit', 'Pest', 'Jest', 'Cypress'],
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-accent-500 to-primary-500',
     },
   ]
 
@@ -52,7 +52,7 @@ const Skills = () => {
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Toolkit</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Tools I reach for often</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="section-rule mx-auto" />
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
             Chosen for speed of iteration, maintainability, and strong user experience
           </p>
@@ -65,7 +65,7 @@ const Skills = () => {
               initial={{ opacity: 1, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
               transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
-              className="glass rounded-xl p-6"
+              className="glass rounded-2xl p-6"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className={`w-1 h-8 rounded-full bg-gradient-to-b ${category.color}`} />
@@ -98,7 +98,7 @@ const Skills = () => {
             { label: 'Technologies', value: '25+' },
             { label: 'Domains Worked In', value: '6+' },
           ].map((stat) => (
-            <div key={stat.label} className="glass rounded-xl p-6 text-center">
+            <div key={stat.label} className="glass rounded-2xl p-6 text-center">
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{stat.value}</div>
               <div className="text-gray-600 dark:text-gray-400 text-sm">{stat.label}</div>
             </div>

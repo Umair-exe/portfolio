@@ -53,7 +53,7 @@ const About = () => {
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">About Me</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Craft, clarity, and shipping discipline</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="section-rule mx-auto" />
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
@@ -81,13 +81,13 @@ const About = () => {
                 initial={{ opacity: 1, y: 10 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
                 transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.08 + index * 0.04 }}
-                className="glass rounded-xl p-6 card-shine"
+                className="glass rounded-2xl p-6"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-primary-500/20 to-accent-500/20 text-primary-600 dark:text-primary-400 mb-4">
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-primary-500/10 text-primary-600 dark:text-primary-300 mb-4">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                <h3 className="text-xl font-semibold text-ink-900 dark:text-white mb-2">{item.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400">{item.description}</p>
               </motion.div>
             ))}
           </div>

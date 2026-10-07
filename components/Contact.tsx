@@ -96,7 +96,7 @@ const Contact = () => {
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Contact</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Let’s make something sharp</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full mb-4" />
+          <div className="section-rule mx-auto mb-4" />
           <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto">
             If you need a SaaS platform, web application, or mobile app, send the outline and I’ll take it from there.
           </p>
@@ -124,7 +124,7 @@ const Contact = () => {
                   transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.06 + index * 0.04 }}
                   className="flex items-center gap-4 glass rounded-lg p-4 group transition-colors"
                 >
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary-500 to-accent-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white transition-transform">
                     {info.icon}
                   </div>
                   <div>
@@ -140,7 +140,7 @@ const Contact = () => {
                 href="https://github.com/umair-exe"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
+                className="w-12 h-12 rounded-xl glass flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Github size={24} />
               </a>
@@ -148,7 +148,7 @@ const Contact = () => {
                 href="https://linkedin.com/in/m-umair-dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full glass flex items-center justify-center text-gray-600 dark:text-gray-400 hover:text-primary-500 dark:hover:text-white transition-colors"
+                className="w-12 h-12 rounded-xl glass flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-primary-500 dark:hover:text-white transition-colors"
               >
                 <Linkedin size={24} />
               </a>
@@ -161,7 +161,7 @@ const Contact = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
             transition={{ duration: fadeDuration, ease: 'easeOut', delay: 0.08 }}
           >
-            <form onSubmit={handleSubmit} className="glass rounded-xl p-8">
+            <form onSubmit={handleSubmit} className="glass rounded-2xl p-8">
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 mb-2 font-medium">
                   Your Name
@@ -225,7 +225,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-primary-500/50 transition-shadow flex items-center justify-center gap-2 ${
+                className={`w-full px-8 py-4 btn-primary rounded-xl font-semibold flex items-center justify-center gap-2 ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >

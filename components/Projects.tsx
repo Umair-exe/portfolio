@@ -19,7 +19,7 @@ const Projects = () => {
         'Automated filing system',
         'Performance optimizations',
       ],
-      gradient: 'from-green-500 to-emerald-500',
+      gradient: 'from-primary-500 to-accent-500',
     },
     {
       title: 'Everwell Edge',
@@ -30,7 +30,7 @@ const Projects = () => {
         'Implemented JWT authentication',
         'Role-based access controls',
       ],
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-accent-500 to-primary-400',
     },
     {
       title: 'SNP - Solidarity Network Platform',
@@ -41,7 +41,7 @@ const Projects = () => {
         'Dynamic form builder with Livewire',
         'Optimized for 10k+ daily transactions',
       ],
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-primary-400 to-accent-400',
     },
     {
       title: 'Mindskiller',
@@ -52,7 +52,7 @@ const Projects = () => {
         'SCORM-compliant course player',
         'Integrated Zoom for live sessions',
       ],
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-accent-400 to-primary-500',
     },
     {
       title: 'PMU Health Application',
@@ -63,7 +63,7 @@ const Projects = () => {
         'Vaccination scheduling system',
         'Reduced report time from 15 to 2 minutes',
       ],
-      gradient: 'from-indigo-500 to-purple-500',
+      gradient: 'from-primary-600 to-accent-500',
     },
   ]
 
@@ -78,7 +78,7 @@ const Projects = () => {
         >
           <p className="section-eyebrow text-primary-700 dark:text-primary-300 text-sm mb-4">Selected Work</p>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 gradient-text">Projects with product weight</h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto rounded-full" />
+          <div className="section-rule mx-auto" />
           <p className="text-gray-600 dark:text-gray-300 text-lg mt-6 max-w-2xl mx-auto">
             SaaS-style workflows, operational platforms, web products, and app-connected systems across multiple industries
           </p>
@@ -91,7 +91,7 @@ const Projects = () => {
               initial={{ opacity: 1, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 10 }}
               transition={{ duration: fadeDuration, ease: 'easeOut', delay: index * 0.04 }}
-              className="glass rounded-xl overflow-hidden group card-shine"
+              className="glass rounded-2xl overflow-hidden group"
             >
               <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
               
@@ -120,7 +120,7 @@ const Projects = () => {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 text-xs font-medium bg-primary-100 dark:bg-primary-500/10 text-primary-700 dark:text-primary-400 rounded-full border border-primary-200 dark:border-primary-500/20"
+                      className="px-3 py-1 text-xs font-medium bg-primary-50 dark:bg-primary-500/10 text-primary-700 dark:text-primary-300 rounded-lg border border-primary-200/80 dark:border-primary-500/20"
                     >
                       {tech}
                     </span>
